@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
 
 class AddressBook:
     def __init__(self,name,phone_num,email):  
@@ -16,9 +11,6 @@ class AddressBook:
         print("Email Address : ",self.email)
 
 
-# In[2]:
-
-
 def add_contact():
     name= input("Name?  ")
     phone_num= input("Phone Number?  ")
@@ -30,9 +22,6 @@ def add_contact():
     return contact
 
 
-# In[3]:
-
-
 def delete_contact(contact_list, name):
     for i, contact in enumerate(contact_list):
         if contact.name == name :
@@ -40,19 +29,12 @@ def delete_contact(contact_list, name):
             
             print("=== Successfully Deleted! ===")
 
-
-# In[4]:
-
-
 def print_contact(contact_list):
     print("====================<Contacts>=====================\n")
     for contact in contact_list:
         contact.print_list()
         print("======================================================")
         
-
-
-# In[5]:
 
 
 def load(contact_list):
@@ -69,9 +51,6 @@ def load(contact_list):
         contact = AddressBook(name, phone, email)
         contact_list.append(contact)
     r.close()
-
-
-# In[6]:
 
 
 def save_contact(contact_list):
@@ -96,9 +75,6 @@ def show_menu():
     return int(menu)
 
 
-# In[12]:
-
-
 def run():
     contact_list = []
         #load(contact_list)
@@ -116,10 +92,5 @@ def run():
         elif menu == 4:
             save_contact(contact_list)
             break
-
-
-# In[ ]:
-
-
 
 
